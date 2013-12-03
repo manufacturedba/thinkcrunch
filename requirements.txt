@@ -1,0 +1,51 @@
+BeautifulSoup==3.2.1
+Django==1.5.5
+Pillow==2.2.1
+South==0.8.2
+argparse==1.2.1
+beautifulsoup4==4.3.2
+boto==2.15.0
+-e git://github.com/maccesch/cmsplugin-contact.git@2708f2c0356ca0bcea645d0de915fa46449c4607#egg=cmsplugin_contact-dev
+cmsplugin-filer==0.9.5
+-e git://github.com/Fantomas42/cmsplugin-zinnia.git@54a348765e87b88b287db4fe1719a7497d470cc4#egg=cmsplugin_zinnia-dev
+distribute==0.6.34
+dj-database-url==0.2.2
+dj-static==0.0.5
+django-appconf==0.6
+django-bitly==0.7
+-e git://github.com/Fantomas42/django-blog-zinnia.git@a91efe257a024bbba096ad8c9d5ddd58c53b31cc#egg=django_blog_zinnia-dev
+django-classy-tags==0.4
+-e git://github.com/divio/django-cms.git@1138ee56b1638cb444edaac72ac55a95940cdd3e#egg=django_cms-dev
+-e git://github.com/piquadrat/django-cms-search@2f16b463aef4c383c05229f8a6bd7ea4719e2388#egg=django_cms_search-dev
+django-compressor==1.3
+django-crispy-forms==1.4.0
+django-filer==0.9.5
+django-haystack==2.1.0
+django-mptt==0.5.2
+django-polymorphic==0.5.3
+django-registration==1.0
+django-registration-bootstrap==0.2.0
+django-reversion==1.7.1
+django-sekizai==0.7
+django-storages==1.1.8
+django-tagging==0.3.1
+django-toolbelt==0.0.1
+django-xmlrpc==0.1.5
+djangocms-admin-style==0.1.4
+djangocms-text-ckeditor==2.0.2
+easy-thumbnails==1.4
+gunicorn==18.0
+haystack==0.15
+html5lib==1.0b3
+psycopg2==2.5.1
+pyelasticsearch==0.6
+pyparsing==2.0.1
+python-ptrace==0.6.5
+pytz==2013.7
+requests==1.2.3
+simplejson==3.3.1
+six==1.4.1
+static==0.4
+tweepy==2.1
+twitter-text-python==1.0.1
+wsgiref==0.1.2

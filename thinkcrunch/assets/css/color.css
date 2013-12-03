@@ -1,0 +1,31 @@
+/* 
+Color template by Jdsfighter
+http://www.colourlovers.com/palette/1411463/Developers_Dream
+*/
+/* line 13, ../sass/color.scss */
+body {
+  color: #333333;
+}
+
+/* line 17, ../sass/color.scss */
+a {
+  color: #48555e;
+}
+/* line 20, ../sass/color.scss */
+a:hover {
+  color: #48555e;
+}
+
+/* line 25, ../sass/color.scss */
+.base header .navbar {
+  background: white;
+}
+/* line 28, ../sass/color.scss */
+.base header .navbar .navbar-brand .logo {
+  color: #1577b7;
+}
+/* line 35, ../sass/color.scss */
+.base header .nav li a:hover {
+  border-bottom-color: #c6b712;
+  background-color: inherit;
+}

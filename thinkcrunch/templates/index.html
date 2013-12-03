@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load cms_tags twitter_tags %}
+
+{% block body_class %}{{ block.super }} index{% endblock %}
+
+{% block content %}
+<div class="toppanel">
+<div class="jumbotron">
+  <div class="container">
+    {% placeholder "Jumbotron" %}
+  </div>
+</div>
+</div>
+<hr>
+<div class="midpanel container">
+<div class="col-lg-6">{% placeholder "Midpanel1" %}</div>
+<div class="col-lg-6">{% placeholder "Midpanel2" %}</div>
+</div>
+<hr>
+<div class="botpanel container">
+<div class="col-lg-6 twitter">
+{% twitter_feed %}
+</div>
+<div class="col-lg-6 blog">
+{% placeholder "IndexBlog" %}
+</div>
+</div>
+{% endblock %}

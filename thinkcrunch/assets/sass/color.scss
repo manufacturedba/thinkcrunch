@@ -1,0 +1,42 @@
+$time: #48555E; // Text, shadows, borders, etc
+$gold: #C6B712; // Links, highlighted text
+$dream: #1577B7; // Soft borders, backdrops, sections
+$sky: #10B1E2;  // Muted text
+$dedede: #DEDEDE; // Pukey. Use sparingly.
+$ink: #333; // Used for all regular text
+
+/* 
+Color template by Jdsfighter
+http://www.colourlovers.com/palette/1411463/Developers_Dream
+*/
+
+body {
+color: $ink;
+}
+
+a {
+// Reset all links
+color: $time;
+&:hover { color: $time; }
+}
+
+.base {
+    header {
+        .navbar {
+            background: white;
+            .navbar-brand {
+                .logo {
+                    color: $dream;
+                   }
+               }
+           }
+        .nav {
+             li {
+                a:hover { 
+                    border-bottom-color: $gold;
+                    background-color: inherit;
+                   }
+               }
+            }
+       }
+}

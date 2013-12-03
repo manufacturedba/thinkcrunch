@@ -1,0 +1,136 @@
+$ink: #333;
+
+@import "compass/css3";
+
+@include font-face("Bitter", font-files("/static/fonts/bitter/Bitter-Regular.ttf"));
+
+html {
+    height: 100%;
+    width: 100%;
+   }
+   
+body {
+    font-size: 2em;
+    height: 100%;
+   }
+
+ul {
+    list-style: none;
+   }
+     
+h1, h2, h3, h4 {
+    font-family: Bitter;
+   }
+
+.base {
+    header {
+        font-size: 0.8em;
+        
+        .navbar {
+            margin-bottom: 0px;
+           }
+        .navbar-brand {
+            .navbar-brand-text {
+                margin: 0px;
+                font-size: 2em;
+               }
+           }
+        .nav {
+             li {
+                a:hover { 
+                    border-bottom-width: 2px;
+                    border-bottom-style: solid;
+                   }
+               }
+             .selected {
+                a:hover {
+                    border-bottom: 0px;
+                    background-color: inherit;
+                   }
+               }     
+       }
+        .navbar-collapse {
+            text-transform: uppercase;
+            .navbar-btn {
+                margin: 10px 60px;
+               }
+           }
+        .navbar-nav {
+            li {
+                a { 
+                    position: relative;
+                    margin: 20px 60px;
+                    padding:2px; 
+                   }
+                ul {
+                    font-size: 0.8em;
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 1;
+                    float: left;
+                    min-width: 160px;
+                    padding: 5px 0; 
+                    list-style: none;
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    margin-top: 20px;
+                    border: 1px solid rgba(0,0,0,0.15);
+                    border-radius: 4px;
+                    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+                    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+                    background-clip: padding-box;
+                    padding: 0;
+                    transition: all .2s ease-in-out;  
+                    li {
+                        display: block;
+                        a {
+                            display: block;
+                            margin: 15px 25px;
+                            &:hover { 
+                                color: red;
+                                border-bottom: none;
+                                text-decoration: none;
+                               }
+                           }
+                       }
+                   }
+               &:hover ul {
+                    margin: 0px;
+                    opacity: 1;
+                    visibility: visible;
+                    transition: opacity .2s, margin .2s, ease-in-out;  
+                   }
+               }
+           }
+       }
+   }
+     
+.index {
+    
+    .toppanel {
+        height: 50%;
+        .jumbotron {
+            height: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+            background: url('/static/img/workstation.jpg') no-repeat center center fixed;
+            .container {
+                padding: 40px;
+                color: white;
+               }
+           }
+       }
+       
+    .midpanel {}
+    
+    .botpanel {
+        font-size: 0.8em;
+       }
+
+}

@@ -1,0 +1,7 @@
+<ul>
+{% for status in statuses %}
+<li class="tweet">
+<a href="{{ status.user.url }}" title="{{ status.user.description }}">@{{ status.user.name }}:</a>&nbsp;{{ status.text }}
+</li>
+{% endfor %}
+</ul>
