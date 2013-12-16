@@ -4,6 +4,18 @@ $dream: #1577B7; // Soft borders, backdrops, sections
 $sky: #10B1E2;  // Muted text
 $dedede: #DEDEDE; // Pukey. Use sparingly.
 $ink: #333; // Used for all regular text
+$twitter-primary: #55ACEE; // Twitter link color
+
+$colors: 
+    time #48555E,
+    gold #C6B712,
+    dream #1577B7, 
+    sky #10B1E2,
+    dedede #DEDEDE, 
+    ink #333,
+    twitter-primary #55ACEE,
+    white #FFFFFF
+;
 
 /* 
 Color template by Jdsfighter
@@ -14,20 +26,60 @@ body {
 color: $ink;
 }
 
+@function getColor ($colorName) {
+  // Run across the color list.
+  @each $color in $colors {
+
+    // If the key (first child of the current $color) is
+    // the same as the specified by params, return the value.
+    @if nth($color, 1) == $colorName {
+      @return nth($color, 2);
+    }
+  }
+}
+
+@mixin class-colors($class, $colors, $target) {
+    @each $color in $colors {
+        .#{$class}-#{nth($color, 1)} {
+            #{$target}: nth($color, 2);
+        }
+    } 
+}
+
+@include class-colors(bgcolor, $colors, background);
+@include class-colors(color, $colors, color);
+
+.full-height {
+    height: 100%;
+    }
+   
 a {
 // Reset all links
 color: $time;
 &:hover { color: $time; }
 }
 
+.backdrop {}
+
 .base {
     header {
         .navbar {
             background: white;
-            .navbar-brand {
-                .logo {
-                    color: $dream;
+            .navbar-header {
+                .navbar-brand {
+                    .logo {
+                        color: $dream;
+                       }
                    }
+                .navbar-toggle {
+                    background: #fdfdfd;
+                    .icon-bar {
+                        background: $dream;
+                       }
+                   }
+               }
+            .navbar-text {
+                color: #777;
                }
            }
         .nav {
@@ -39,4 +91,32 @@ color: $time;
                }
             }
        }
+    .toppanel {
+        background: transparentize($time, 0.9);
+        border: 1px dashed $ink;
+        }   
+    .botpanel {
+        .twitter {
+            .tweets { padding: 0; }
+            .tweet {
+                a { color: $twitter-primary; }   
+               }
+           }
+        .blog {
+            a {
+                color: $gold;
+                }
+            }
+            
+       }
 }
+
+#thecity {
+    color: white;
+    .jumbotron {
+        .container {
+            border-radius: 10px;
+            background: transparentize($dream, 0.4);
+           } 
+       }
+   }

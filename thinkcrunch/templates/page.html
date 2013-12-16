@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load cms_tags %}
+{% block body_class %}{{ block.super }} page {% page_attribute "slug" %}{% endblock %}
+
+{% block content %}
+<section class="toppanel">
+    <div class="jumbotron">
+      <div class="container">
+        <h1 id="PageTitle" class="col-md-12">{% page_attribute "page_title" %}</h1>
+        <div class="col-md-6">{% placeholder "Page Description Left" %}</div>
+        <div class="col-md-6">{% placeholder "Page Description Right" or %}Sometimes I wonder {% endplaceholder %}</div>
+      </div>
+    </div>
+    <div id="AboutMe" class="backdrop bgcolor-time">
+        <div class="container">
+        <div class="col-md-6 color-white marged">
+        {% placeholder "About Me Left" %}
+        </div>
+        <div class="col-md-5 col-md-offset-1 bgcolor-white padded">
+        {% placeholder "About Me Right" %}
+        </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="midpanel backdrop bgcolor-ink">
+    <div id="AboutProcess" class="container">
+        <div class="col-md-6 bgcolor-gold padded">
+        {% placeholder "About Process Left" %}
+        </div>
+        <div class="col-md-6 color-dream marged">
+        {% placeholder "About Process Right" %}
+        </div>
+    </div>
+</section>
+
+
+<section class="botpanel backdrop bgcolor-dedede">
+    <div id="AboutToolset" class="container ">
+        <div class="col-md-6 color-ink marged">
+        {% placeholder "About Toolset Left" %}
+        </div>
+        <div class="col-md-6 color-twitter-primary padded">
+        {% placeholder "About Toolset Right" %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+<! -- 
+Let's think.
+
+Toolset
+Technologies
+Purpose
+Contact Us
+Anything else?
+Development process?
+Me!
+
+-->

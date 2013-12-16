@@ -2,30 +2,154 @@
 Color template by Jdsfighter
 http://www.colourlovers.com/palette/1411463/Developers_Dream
 */
-/* line 13, ../sass/color.scss */
+/* line 25, ../sass/color.scss */
 body {
   color: #333333;
 }
 
-/* line 17, ../sass/color.scss */
+/* line 43, ../sass/color.scss */
+.bgcolor-time {
+  background: #48555e;
+}
+
+/* line 43, ../sass/color.scss */
+.bgcolor-gold {
+  background: #c6b712;
+}
+
+/* line 43, ../sass/color.scss */
+.bgcolor-dream {
+  background: #1577b7;
+}
+
+/* line 43, ../sass/color.scss */
+.bgcolor-sky {
+  background: #10b1e2;
+}
+
+/* line 43, ../sass/color.scss */
+.bgcolor-dedede {
+  background: #dedede;
+}
+
+/* line 43, ../sass/color.scss */
+.bgcolor-ink {
+  background: #333333;
+}
+
+/* line 43, ../sass/color.scss */
+.bgcolor-twitter-primary {
+  background: #55acee;
+}
+
+/* line 43, ../sass/color.scss */
+.bgcolor-white {
+  background: white;
+}
+
+/* line 43, ../sass/color.scss */
+.color-time {
+  color: #48555e;
+}
+
+/* line 43, ../sass/color.scss */
+.color-gold {
+  color: #c6b712;
+}
+
+/* line 43, ../sass/color.scss */
+.color-dream {
+  color: #1577b7;
+}
+
+/* line 43, ../sass/color.scss */
+.color-sky {
+  color: #10b1e2;
+}
+
+/* line 43, ../sass/color.scss */
+.color-dedede {
+  color: #dedede;
+}
+
+/* line 43, ../sass/color.scss */
+.color-ink {
+  color: #333333;
+}
+
+/* line 43, ../sass/color.scss */
+.color-twitter-primary {
+  color: #55acee;
+}
+
+/* line 43, ../sass/color.scss */
+.color-white {
+  color: white;
+}
+
+/* line 52, ../sass/color.scss */
+.full-height {
+  height: 100%;
+}
+
+/* line 56, ../sass/color.scss */
 a {
   color: #48555e;
 }
-/* line 20, ../sass/color.scss */
+/* line 59, ../sass/color.scss */
 a:hover {
   color: #48555e;
 }
 
-/* line 25, ../sass/color.scss */
+/* line 66, ../sass/color.scss */
 .base header .navbar {
   background: white;
 }
-/* line 28, ../sass/color.scss */
-.base header .navbar .navbar-brand .logo {
+/* line 70, ../sass/color.scss */
+.base header .navbar .navbar-header .navbar-brand .logo {
   color: #1577b7;
 }
-/* line 35, ../sass/color.scss */
+/* line 74, ../sass/color.scss */
+.base header .navbar .navbar-header .navbar-toggle {
+  background: #fdfdfd;
+}
+/* line 76, ../sass/color.scss */
+.base header .navbar .navbar-header .navbar-toggle .icon-bar {
+  background: #1577b7;
+}
+/* line 81, ../sass/color.scss */
+.base header .navbar .navbar-text {
+  color: #777;
+}
+/* line 87, ../sass/color.scss */
 .base header .nav li a:hover {
   border-bottom-color: #c6b712;
   background-color: inherit;
+}
+/* line 94, ../sass/color.scss */
+.base .toppanel {
+  background: rgba(72, 85, 94, 0.1);
+  border: 1px dashed #333333;
+}
+/* line 100, ../sass/color.scss */
+.base .botpanel .twitter .tweets {
+  padding: 0;
+}
+/* line 102, ../sass/color.scss */
+.base .botpanel .twitter .tweet a {
+  color: #55acee;
+}
+/* line 106, ../sass/color.scss */
+.base .botpanel .blog a {
+  color: #c6b712;
+}
+
+/* line 114, ../sass/color.scss */
+#thecity {
+  color: white;
+}
+/* line 117, ../sass/color.scss */
+#thecity .jumbotron .container {
+  border-radius: 10px;
+  background: rgba(21, 119, 183, 0.6);
 }

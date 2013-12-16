@@ -4,25 +4,35 @@
 {% block body_class %}{{ block.super }} index{% endblock %}
 
 {% block content %}
-<div class="toppanel">
-<div class="jumbotron">
-  <div class="container">
-    {% placeholder "Jumbotron" %}
-  </div>
+<div class="toppanel ">
+<div class="container">
+<div class="col-lg-8 col-lg-offset-2 gigantetron octa gon" id="">
+  {% placeholder "Gigantetron" or %}Hello{% endplaceholder %}
 </div>
 </div>
-<hr>
-<div class="midpanel container">
-<div class="col-lg-6">{% placeholder "Midpanel1" %}</div>
-<div class="col-lg-6">{% placeholder "Midpanel2" %}</div>
 </div>
-<hr>
-<div class="botpanel container">
-<div class="col-lg-6 twitter">
+
+<hr class="invisible">
+<div class="midpanel">
+    <div class="container">
+    <div class="col-lg-12">{% placeholder "midpanel-12" or %}<!-- Empty mate -->{% endplaceholder %}</div>
+    <div class="col-lg-6">{% placeholder "midpanel-6-1" or %}<!-- Empty mate -->{% endplaceholder %}</div>
+    <div class="col-lg-6">{% placeholder "midpanel-6-2" or %}<!-- Empty mate -->{% endplaceholder %}</div>
+    </div>
+</div>
+
+<hr class="invisible">
+
+<div class="botpanel bgcolor-ink color-white">
+<div class="container">
+<div class="col-lg-6 social twitter">
+<h2>Twitter</h2>
 {% twitter_feed %}
 </div>
-<div class="col-lg-6 blog">
+<div class="col-lg-6 social blog">
+<h2>Blog <small class="">musings from around the web</small></h2>
 {% placeholder "IndexBlog" %}
+</div>
 </div>
 </div>
 {% endblock %}
