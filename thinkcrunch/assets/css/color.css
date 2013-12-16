@@ -101,54 +101,58 @@ a:hover {
   color: #48555e;
 }
 
-/* line 66, ../sass/color.scss */
+/* line 67, ../sass/color.scss */
+.base header .selected a {
+  color: #10b1e2;
+}
+/* line 69, ../sass/color.scss */
 .base header .navbar {
   background: white;
 }
-/* line 70, ../sass/color.scss */
+/* line 73, ../sass/color.scss */
 .base header .navbar .navbar-header .navbar-brand .logo {
   color: #1577b7;
 }
-/* line 74, ../sass/color.scss */
+/* line 77, ../sass/color.scss */
 .base header .navbar .navbar-header .navbar-toggle {
   background: #fdfdfd;
 }
-/* line 76, ../sass/color.scss */
+/* line 79, ../sass/color.scss */
 .base header .navbar .navbar-header .navbar-toggle .icon-bar {
   background: #1577b7;
 }
-/* line 81, ../sass/color.scss */
+/* line 84, ../sass/color.scss */
 .base header .navbar .navbar-text {
   color: #777;
 }
-/* line 87, ../sass/color.scss */
+/* line 90, ../sass/color.scss */
 .base header .nav li a:hover {
   border-bottom-color: #c6b712;
   background-color: inherit;
 }
-/* line 94, ../sass/color.scss */
+/* line 97, ../sass/color.scss */
 .base .toppanel {
   background: rgba(72, 85, 94, 0.1);
   border: 1px dashed #333333;
 }
-/* line 100, ../sass/color.scss */
+/* line 103, ../sass/color.scss */
 .base .botpanel .twitter .tweets {
   padding: 0;
 }
-/* line 102, ../sass/color.scss */
+/* line 105, ../sass/color.scss */
 .base .botpanel .twitter .tweet a {
   color: #55acee;
 }
-/* line 106, ../sass/color.scss */
+/* line 109, ../sass/color.scss */
 .base .botpanel .blog a {
   color: #c6b712;
 }
 
-/* line 114, ../sass/color.scss */
+/* line 117, ../sass/color.scss */
 #thecity {
   color: white;
 }
-/* line 117, ../sass/color.scss */
+/* line 120, ../sass/color.scss */
 #thecity .jumbotron .container {
   border-radius: 10px;
   background: rgba(21, 119, 183, 0.6);

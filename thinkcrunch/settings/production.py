@@ -51,6 +51,8 @@ AWS_HEADERS = {
 		'Cache-Control': 'no-cache, max-age=%d' % max_age,
 		}
 		
+AWS_S3_SECURE_URLS = False
+		
 def get_cache():
 	import os
 	try:
