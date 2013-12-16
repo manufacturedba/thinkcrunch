@@ -30,7 +30,7 @@ MEDIA_URL = '/media/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = 'http://static.thinkcrunch.com/'
+STATIC_URL = 'http://static.thinkcrunch.com.s3.amazonaws.com/'
 
 ROOT_URLCONF = 'thinkcrunch.urls.production'
 
