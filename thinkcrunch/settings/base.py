@@ -34,7 +34,6 @@ USE_TZ = True
 
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
-ADMIN_MEDIA_PREFIX = '/static/admin'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 STATICFILES_DIRS = (

@@ -34,7 +34,7 @@ STATIC_URL = 'http://static.thinkcrunch.com/'
 
 ROOT_URLCONF = 'thinkcrunch.urls.production'
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+DEFAULT_FILE_STORAGE = 'thinkcrunch.storage.CachedS3BotoStorage'
 
 STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
 
