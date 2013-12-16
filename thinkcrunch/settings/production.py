@@ -26,12 +26,12 @@ INTERNAL_IPS = ('127.0.0.1', )
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '/media/'
+
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = 'http://static.thinkcrunch.com.s3.amazonaws.com/'
-
+STATIC_URL = 'http://static.thinkcrunch.com/'
+MEDIA_URL = '/media/'
 ROOT_URLCONF = 'thinkcrunch.urls.production'
 
 DEFAULT_FILE_STORAGE = 'thinkcrunch.storage.CachedS3BotoStorage'
@@ -54,6 +54,9 @@ AWS_HEADERS = {
 		}
 		
 AWS_S3_SECURE_URLS = False
+
+from S3 import CallingFormat
+AWS_CALLING_FORMAT = CallingFormat.SUBDOMAIN
 		
 def get_cache():
 	import os
