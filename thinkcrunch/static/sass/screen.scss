@@ -1,0 +1,208 @@
+$ink: #333;
+
+@import "compass/css3";
+@import "blueprint/fancy-type";
+@import "blueprint/typography";
+
+@include font-face("Bitter", font-files("/static/fonts/bitter/Bitter-Regular.ttf"));
+
+@mixin sibling-indentation {
+  text-indent: 2em;
+  margin-top: -0.5em;
+  /* Don't want this in forms. */
+  form & {
+    text-indent: 0;
+  }
+}
+
+html {
+    height: 100%;
+    width: 100%;
+   }
+   
+body {
+    font-size: 2.5em;
+    height: 100%;
+   }
+
+ul {
+    list-style: none;
+   }
+     
+h1, h2, h3, h4 {
+    font-family: Bitter;
+   }
+
+.base { // Begin .base
+    .navbar-brand {
+            .navbar-brand-text {
+                margin: 0px;
+                
+               }
+           }
+    header {
+        font-size: 0.8em;
+        
+        .navbar {
+            margin-bottom: 0px;
+           }
+        .nav {
+             li {
+                a:hover { 
+                    border-bottom-width: 2px;
+                    border-bottom-style: solid;
+                   }
+               }
+             .selected {
+                a:hover {
+                    border-bottom: 0px;
+                    background-color: inherit;
+                   }
+               }     
+       }
+        .navbar-collapse {
+            
+            .navbar-btn {
+                
+               }
+           }
+        .navbar-nav {
+            text-transform: uppercase;
+            > li {
+                a { 
+                    position: relative;
+                    margin: auto 40px;
+                   }
+                > ul {
+                    font-size: 0.8em;
+                    visibility: hidden;
+                    opacity: 0;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 1;
+                    float: left;
+                    min-width: 160px;
+                    padding: 5px 0; 
+                    list-style: none;
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    margin-top: 20px;
+                    border: 1px solid rgba(0,0,0,0.15);
+                    border-radius: 4px;
+                    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+                    box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+                    background-clip: padding-box;
+                    padding: 0;
+                    transition: all .2s ease-in-out;  
+                    li {
+                        display: block;
+                        a {
+                            display: block;
+                            margin: 15px 25px;
+                            &:hover { 
+                                color: red;
+                                border-bottom: none;
+                                text-decoration: none;
+                               }
+                           }
+                       }
+                   }
+               &:hover ul {
+                    margin: 0px;
+                    opacity: 1;
+                    visibility: visible;
+                    transition: opacity .2s, margin .2s, ease-in-out;  
+                   }
+               }
+           }
+        .navbar-form {
+             margin-top:5px;
+            }
+       }
+    
+   } // End .base
+     
+.index { // Begin .index
+    
+    .toppanel {
+        .gigantetron {
+            $size: 500px;
+            height: $size;
+            background-image: url('/static/img/robertorodriguez.jpg');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-attachment: scroll;
+            @include background-size(auto 100%);
+            line-height: $size;
+            transition: border-radius 4000ms ease;
+            &:hover { border-radius: 100%; transition: border-radius 2000ms ease }
+            @include single-box-shadow($inset: true, $hoff: 2px, $voff: 2px, $blur: 10px);
+           }
+       }
+       
+    .midpanel {
+        h1 {
+            font-size: 2.5em;
+            }
+    
+    }
+    
+    .botpanel {
+        font-size: 0.8em;
+        .twitter {
+            .tweet {
+                font-size: 0.9em;
+                line-height: 1.4em;  
+                margin: 0px 0px 10px 0px;
+               
+               }
+           }
+        .blog {
+            text-align: justify;
+            @include fancy-type;
+            font-size: 0.9em;
+            .entry-body { 
+                p {
+                    &:first-child { font-size: 1.2em; }
+                   }
+               }
+            .entry-info { font-size: 0.9em; }
+            .entry-last-update, .entry-footer { display: none; }
+           }
+       }
+
+} // End .index
+
+.page { // Begin .page
+    .backdrop {
+        .container {
+            
+        }
+        .marged {
+            margin: 80px 0px 110px 0px;
+        }
+        .padded {
+            padding: 90px 10px 120px 10px;
+        }
+    }
+}
+
+#AboutMe {
+  
+}
+ 
+#thecity {
+    .jumbotron {
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-attachment: fixed;
+            background: url('/static/img/thecity.jpg') no-repeat center center fixed;
+            .container {
+                @include single-box-shadow;
+               }
+           }
+       }
+       
