@@ -37,12 +37,12 @@
         <meta name="author" content="{% block meta_author %}{% endblock %}" />
         <meta name="viewport" content="width=device-width" />
         {% compress css %}
-        <link rel="stylesheet" href="/static/css/vendor/bootstrap.min.css" />
-        <link rel="stylesheet" href="/static/css/vendor/bootstrap-theme.min.css" />
-        <link rel="stylesheet" href="/static/css/main.css" />
-        <link rel="stylesheet" href="/static/css/screen.css" />
-        <link rel="stylesheet" href="/static/css/color.css" />
-        <link rel="stylesheet" href="/static/css/shapes.css" />
+        <link rel="stylesheet" href="/css/vendor/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/vendor/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="/css/screen.css" />
+        <link rel="stylesheet" href="/css/color.css" />
+        <link rel="stylesheet" href="/css/shapes.css" />
         {% endcompress %}
         <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.2.min.js"></script>
         {% render_block "css" %}
@@ -119,9 +119,9 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         {% compress js %}
         <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="/static/js/vendor/bootstrap.min.js"></script>
-        <script src="/static/js/plugins.js"></script>
-        <script src="/static/js/main.js"></script>
+        <script src="/js/vendor/bootstrap.min.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="/js/main.js"></script>
         {% endcompress %}
         
         {% endblock javascript_library %}
