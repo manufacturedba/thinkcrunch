@@ -45,7 +45,7 @@ STATIC_URL = '/static/'
 ROOT_URLCONF = 'thinkcrunch.urls.dev'
 
 COMPRESS_OFFLINE = False
-COMPRESS_ENABLED = False
+COMPRESS_ENABLED = True
 
 EMAIL_PORT = 1025
 
