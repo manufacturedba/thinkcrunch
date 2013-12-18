@@ -55,9 +55,6 @@ AWS_HEADERS = {
 		
 AWS_S3_SECURE_URLS = False
 
-from S3 import CallingFormat
-AWS_CALLING_FORMAT = CallingFormat.SUBDOMAIN
-		
 def get_cache():
 	import os
 	try:

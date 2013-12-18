@@ -3,6 +3,8 @@
 from thinkcrunch.settings.base import *
 
 DEBUG = True
+STATIC_DEBUG = False
+
 TEMPLATE_DEBUG = DEBUG
 
 SITE_ID = 1
@@ -54,3 +56,29 @@ CACHES = {
 }
 
 COMPRESS_CACHE_BACKEND = "default"
+
+if not STATIC_DEBUG:
+    STATIC_URL = 'http://static.thinkcrunch.com.s3.amazonaws.com/'
+    MEDIA_URL = '/media/'
+    ROOT_URLCONF = 'thinkcrunch.urls.production'
+
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+    STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
+
+    COMPRESS_URL = STATIC_URL
+    COMPRESS_STORAGE = DEFAULT_FILE_STORAGE
+    COMPRESS_OFFLINE = False
+
+    AWS_ACCESS_KEY_ID = 'AKIAJ7WR3NUFVC6R2AXQ'
+
+    AWS_SECRET_ACCESS_KEY = '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'
+
+    AWS_STORAGE_BUCKET_NAME = 'static.thinkcrunch.com'
+
+    AWS_HEADERS = {
+		    'x-amz-acl': 'public-read',
+		    'Cache-Control': 'no-cache, max-age=%d' % max_age,
+		    }
+		
+    AWS_S3_SECURE_URLS = False

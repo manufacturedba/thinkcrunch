@@ -3,7 +3,6 @@ Django==1.5.5
 Pillow==2.2.1
 South==0.8.2
 argparse==1.2.1
-beautifulsoup4==4.3.2
 boto==2.15.0
 -e git://github.com/maccesch/cmsplugin-contact.git@2708f2c0356ca0bcea645d0de915fa46449c4607#egg=cmsplugin_contact-dev
 cmsplugin-filer==0.9.5
@@ -31,7 +30,7 @@ django-storages==1.1.8
 django-tagging==0.3.1
 django-toolbelt==0.0.1
 django-xmlrpc==0.1.5
-djangocms-admin-style==0.1.4
+djangocms-admin-style==0.2.0
 djangocms-text-ckeditor==2.0.2
 easy-thumbnails==1.4
 gunicorn==18.0

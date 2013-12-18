@@ -53,7 +53,15 @@ $(document).ready(function () {
 	$.fn.replace = function(o) { 
 		return this.after(o).remove().end(); 
 	};
-
+    function script_url_path() {
+                // Find the URL that loaded this script (not sure if we can
+                // programatically determine the name of the current script, so it is
+                // hardcoded here)
+                full_url = $('script[src*="/cms.changelist.js"]').attr('src');
+                // Return everything but the filename
+                return full_url.slice(0,full_url.lastIndexOf('/'));
+        }
+        
 	var tree;
 	// global initTree function
 	initTree = function(){
@@ -77,7 +85,7 @@ $(document).ready(function () {
 				rtl: false,
 				animation: 0,
 				hover_mode: true,
-				theme_path: false,
+				theme_path: script_url_path() + "/../jstree/themes/",
 				theme_name: "default",
 				a_class: "title"
 			},
