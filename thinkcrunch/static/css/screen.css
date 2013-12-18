@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Bitter";
-  src: url(/static/fonts/bitter/Bitter-Regular.ttf) format('truetype');
+  src: url('/css/fonts/../../static/fonts/bitter/Bitter-Regular.ttf') format('truetype');
 }
 
 /* line 18, ../sass/screen.scss */
@@ -110,7 +110,7 @@ h1, h2, h3, h4 {
 /* line 129, ../sass/screen.scss */
 .index .toppanel .gigantetron {
   height: 500px;
-  background-image: url("/static/img/robertorodriguez.jpg");
+  background-image: url("../img/robertorodriguez.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-attachment: scroll;
@@ -215,7 +215,7 @@ form .index .botpanel .blog p + p {
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  background: url("/static/img/thecity.jpg") no-repeat center center fixed;
+  background: url("static/img/thecity.jpg") no-repeat center center fixed;
 }
 /* line 203, ../sass/screen.scss */
 #thecity .jumbotron .container {

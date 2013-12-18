@@ -4,7 +4,7 @@ $ink: #333;
 @import "blueprint/fancy-type";
 @import "blueprint/typography";
 
-@include font-face("Bitter", font-files("/static/fonts/bitter/Bitter-Regular.ttf"));
+@include font-face("Bitter", font-files("../../static/fonts/bitter/Bitter-Regular.ttf"));
 
 @mixin sibling-indentation {
   text-indent: 2em;
@@ -129,7 +129,7 @@ h1, h2, h3, h4 {
         .gigantetron {
             $size: 500px;
             height: $size;
-            background-image: url('/static/img/robertorodriguez.jpg');
+            background-image: url('../img/robertorodriguez.jpg');
             background-repeat: no-repeat;
             background-position: 50% 50%;
             background-attachment: scroll;
@@ -199,7 +199,7 @@ h1, h2, h3, h4 {
             -o-background-size: cover;
             background-size: cover;
             background-attachment: fixed;
-            background: url('/static/img/thecity.jpg') no-repeat center center fixed;
+            background: url('static/img/thecity.jpg') no-repeat center center fixed;
             .container {
                 @include single-box-shadow;
                }

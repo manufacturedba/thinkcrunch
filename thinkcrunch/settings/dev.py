@@ -3,7 +3,7 @@
 from thinkcrunch.settings.base import *
 
 DEBUG = True
-STATIC_DEBUG = False
+STATIC_DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
 
