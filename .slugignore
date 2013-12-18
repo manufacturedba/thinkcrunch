@@ -1,4 +1,6 @@
-/assets
-/static
+assets
 *dev*
-
+tests
+tests.py
+static
+resources
