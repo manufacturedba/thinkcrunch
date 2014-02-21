@@ -3,7 +3,7 @@
 from thinkcrunch.settings.base import *
 
 DEBUG = True
-STATIC_DEBUG = True
+STATIC_DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -34,7 +34,6 @@ INTERNAL_IPS = ('127.0.0.1', )
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = '/media/'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -58,27 +57,34 @@ CACHES = {
 COMPRESS_CACHE_BACKEND = "default"
 
 if not STATIC_DEBUG:
-    STATIC_URL = 'http://static.thinkcrunch.com.s3.amazonaws.com/'
-    MEDIA_URL = '/media/'
+    PROJECT_ROOT = os.path.join(ROOT_PATH, 'static/')
+    COMPRESS_ROOT = STATIC_ROOT
+    
+    STATIC_URL = "http://static.thinkcrunch.com/"
+    MEDIA_URL = STATIC_URL + 'media/'
+    COMPRESS_URL = STATIC_URL
     ROOT_URLCONF = 'thinkcrunch.urls.production'
 
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-
+    DEFAULT_FILE_STORAGE = 'thinkcrunch.storage.CachedS3BotoStorage'
     STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
-
-    COMPRESS_URL = STATIC_URL
     COMPRESS_STORAGE = DEFAULT_FILE_STORAGE
-    COMPRESS_OFFLINE = False
+    
+    
+    COMPRESS_ENABLED = True
+    COMPRESS_OFFLINE = True
+    
 
     AWS_ACCESS_KEY_ID = 'AKIAJ7WR3NUFVC6R2AXQ'
 
     AWS_SECRET_ACCESS_KEY = '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'
 
     AWS_STORAGE_BUCKET_NAME = 'static.thinkcrunch.com'
+    import boto.s3.connection
+    AWS_S3_CALLING_FORMAT = boto.s3.connection.VHostCallingFormat()
 
+    AWS_QUERYSTRING_AUTH = False
     AWS_HEADERS = {
 		    'x-amz-acl': 'public-read',
-		    'Cache-Control': 'no-cache, max-age=%d' % max_age,
+            'Cache-Control': 'public, max-age=31556926'
 		    }
-		
-    AWS_S3_SECURE_URLS = False
+	

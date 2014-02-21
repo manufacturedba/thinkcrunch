@@ -7,9 +7,10 @@ import thinkcrunch as project_module
 from zinnia.xmlrpc import ZINNIA_XMLRPC_METHODS
 
 gettext = lambda s: s
-max_age = 315360000
+max_age = 31556926
 
 PROJECT_ROOT = os.path.dirname(os.path.realpath(project_module.__file__))
+ROOT_PATH = os.path.dirname(__file__)
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -32,6 +33,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATIC_URL = '/static/'
+
+MEDIA_URL = STATIC_URL + 'media'
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
