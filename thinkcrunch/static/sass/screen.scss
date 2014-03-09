@@ -1,10 +1,12 @@
 $ink: #333;
 
+$s3Static: "http://static.thinkcrunch.com/";
+
 @import "compass/css3";
 @import "blueprint/fancy-type";
 @import "blueprint/typography";
 
-@include font-face("Bitter", font-files("../../static/fonts/bitter/Bitter-Regular.ttf"));
+@include font-face("Bitter", font-files($s3Static + "fonts/bitter/Bitter-Regular.ttf"));
 
 @mixin sibling-indentation {
   text-indent: 2em;

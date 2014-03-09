@@ -1,62 +1,62 @@
 @font-face {
   font-family: "Bitter";
-  src: url('/css/fonts/../../static/fonts/bitter/Bitter-Regular.ttf') format('truetype');
+  src: url(http://static.thinkcrunch.com/fonts/bitter/Bitter-Regular.ttf) format('truetype');
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 html {
   height: 100%;
   width: 100%;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 body {
   font-size: 2.5em;
   height: 100%;
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
 ul {
   list-style: none;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 h1, h2, h3, h4 {
   font-family: Bitter;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 .base .navbar-brand .navbar-brand-text {
   margin: 0px;
 }
-/* line 43, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 .base header {
   font-size: 0.8em;
 }
-/* line 46, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 .base header .navbar {
   margin-bottom: 0px;
 }
-/* line 51, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 .base header .nav li a:hover {
   border-bottom-width: 2px;
   border-bottom-style: solid;
 }
-/* line 57, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .base header .nav .selected a:hover {
   border-bottom: 0px;
   background-color: inherit;
 }
-/* line 69, ../sass/screen.scss */
+/* line 71, ../sass/screen.scss */
 .base header .navbar-nav {
   text-transform: uppercase;
 }
-/* line 72, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .base header .navbar-nav > li a {
   position: relative;
   margin: auto 40px;
 }
-/* line 76, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .base header .navbar-nav > li > ul {
   font-size: 0.8em;
   visibility: hidden;
@@ -80,38 +80,38 @@ h1, h2, h3, h4 {
   padding: 0;
   transition: all .2s ease-in-out;
 }
-/* line 98, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .base header .navbar-nav > li > ul li {
   display: block;
 }
-/* line 100, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .base header .navbar-nav > li > ul li a {
   display: block;
   margin: 15px 25px;
 }
-/* line 103, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .base header .navbar-nav > li > ul li a:hover {
   color: red;
   border-bottom: none;
   text-decoration: none;
 }
-/* line 111, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .base header .navbar-nav > li:hover ul {
   margin: 0px;
   opacity: 1;
   visibility: visible;
   transition: opacity .2s, margin .2s, ease-in-out;
 }
-/* line 119, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .base header .navbar-form {
   margin-top: 5px;
 }
-/* line 123, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .base .navbar-brand-text {
   font-size: 35px;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 .index .toppanel .gigantetron {
   margin: 0 0 10px 0;
   height: 200px;
@@ -124,11 +124,11 @@ h1, h2, h3, h4 {
   background-size: auto 100%;
   line-height: 200px;
 }
-/* line 144, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .index .midpanel h1 {
   font-size: 2.5em;
 }
-/* line 147, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .index .midpanel .blog {
   text-align: justify;
   font-size: 0.7em;
@@ -139,7 +139,7 @@ h1, h2, h3, h4 {
   margin-top: -0.5em;
   /* Don't want this in forms. */
 }
-/* line 13, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 form .index .midpanel .blog p + p {
   text-indent: 0;
 }
@@ -171,44 +171,44 @@ form .index .midpanel .blog p + p {
   font-style: italic;
   font-weight: normal;
 }
-/* line 153, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 .index .midpanel .blog .entry-body p:first-child {
   font-size: 1.1em;
 }
-/* line 156, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .index .midpanel .blog .entry-info {
   font-size: 0.5em;
 }
-/* line 157, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 .index .midpanel .blog .entry-last-update, .index .midpanel .blog .entry-footer {
   display: none;
 }
-/* line 161, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .index .toppanel {
   font-size: 0.8em;
 }
-/* line 164, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 .index .toppanel .twitter .tweets {
   margin: 0;
   padding: 0;
 }
-/* line 168, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .index .toppanel .twitter .tweet {
   font-size: 0.8em;
   line-height: 1.4em;
   margin: 0px 0px 10px 0px;
 }
 
-/* line 184, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .page .backdrop .marged {
   margin: 80px 0px 110px 0px;
 }
-/* line 187, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .page .backdrop .padded {
   padding: 90px 10px 120px 10px;
 }
 
-/* line 198, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 #thecity .jumbotron {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -217,7 +217,7 @@ form .index .midpanel .blog p + p {
   background-attachment: fixed;
   background: url("static/img/thecity.jpg") no-repeat center center fixed;
 }
-/* line 205, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 #thecity .jumbotron .container {
   -webkit-box-shadow: 0px 0px 5px #333333;
   -moz-box-shadow: 0px 0px 5px #333333;

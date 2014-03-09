@@ -3,7 +3,7 @@
 from thinkcrunch.settings.base import *
 
 DEBUG = True
-STATIC_DEBUG = True
+STATIC_DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -70,19 +70,19 @@ if not STATIC_DEBUG:
     COMPRESS_STORAGE = DEFAULT_FILE_STORAGE
     
     
-    COMPRESS_ENABLED = True
-    COMPRESS_OFFLINE = True
+    COMPRESS_ENABLED = False
+    COMPRESS_OFFLINE = False
     
-
+    AWS_S3_SECURE_URLS = False
     AWS_ACCESS_KEY_ID = 'AKIAJ7WR3NUFVC6R2AXQ'
 
     AWS_SECRET_ACCESS_KEY = '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'
 
     AWS_STORAGE_BUCKET_NAME = 'static.thinkcrunch.com'
     import boto.s3.connection
-    AWS_S3_CALLING_FORMAT = boto.s3.connection.VHostCallingFormat()
+#    AWS_S3_CALLING_FORMAT = boto.s3.connection.VHostCallingFormat()
 
-    AWS_QUERYSTRING_AUTH = False
+#    AWS_QUERYSTRING_AUTH = False
     AWS_HEADERS = {
 		    'x-amz-acl': 'public-read',
             'Cache-Control': 'public, max-age=31556926'
