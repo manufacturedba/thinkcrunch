@@ -81,9 +81,9 @@ if not STATIC_DEBUG:
 
     AWS_STORAGE_BUCKET_NAME = 'static.thinkcrunch.com'
     import boto.s3.connection
-    AWS_S3_CALLING_FORMAT = boto.s3.connection.VHostCallingFormat()
+#    AWS_S3_CALLING_FORMAT = boto.s3.connection.VHostCallingFormat()
 
-#    AWS_QUERYSTRING_AUTH = False
+    AWS_QUERYSTRING_AUTH = False
     AWS_HEADERS = {
 		    'x-amz-acl': 'public-read',
             'Cache-Control': 'public, max-age=31556926'
