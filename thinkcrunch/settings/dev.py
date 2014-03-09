@@ -3,7 +3,7 @@
 from thinkcrunch.settings.base import *
 
 DEBUG = True
-STATIC_DEBUG = False
+STATIC_DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -44,7 +44,7 @@ STATIC_URL = '/static/'
 ROOT_URLCONF = 'thinkcrunch.urls.dev'
 
 COMPRESS_OFFLINE = False
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False
 
 EMAIL_PORT = 1025
 

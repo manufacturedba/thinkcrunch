@@ -136,7 +136,7 @@ h1, h2, h3, h4 {
             @include background-size(auto 100%);
             line-height: $size;
             transition: border-radius 4000ms ease;
-            &:hover { border-radius: 100%; transition: border-radius 2000ms ease }
+/*           &:hover { border-radius: 100%; transition: border-radius 2000ms ease } */
             @include single-box-shadow($inset: true, $hoff: 2px, $voff: 2px, $blur: 10px);
            }
        }
