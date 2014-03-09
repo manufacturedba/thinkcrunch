@@ -5,34 +5,35 @@
 
 {% block content %}
 <div class="toppanel ">
+<div class="col-lg-2 ">
+    <div class="gigantetron" id="">
+        {% placeholder "Gigantetron" or %}{% endplaceholder %}
+    </div>
+    <div class="social twitter">
+        {% twitter_feed %}
+    </div>
+</div>
+</div>
 <div class="container">
-<div class="col-lg-8 col-lg-offset-2 gigantetron" id="">
-  {% placeholder "Gigantetron" or %}{% endplaceholder %}
+<div class="midpanel col-lg-offset-1">
+    <div class="col-lg-12">{% placeholder "midpanel-12" or %}<!-- Empty mate -->{% endplaceholder %}</div>
+    <div class="col-lg-6">{% placeholder "midpanel-6-1" or %}<!-- Empty mate -->{% endplaceholder %}</div>
+    <div class="col-lg-6">{% placeholder "midpanel-6-2" or %}<!-- Empty mate -->{% endplaceholder %}</div>
+<div class="col-lg-12 social blog container">
+{% placeholder "IndexBlog" %}
 </div>
 </div>
 </div>
 
 <hr class="invisible">
-<div class="midpanel">
-    <div class="container">
-    <div class="col-lg-12">{% placeholder "midpanel-12" or %}<!-- Empty mate -->{% endplaceholder %}</div>
-    <div class="col-lg-6">{% placeholder "midpanel-6-1" or %}<!-- Empty mate -->{% endplaceholder %}</div>
-    <div class="col-lg-6">{% placeholder "midpanel-6-2" or %}<!-- Empty mate -->{% endplaceholder %}</div>
-    </div>
-</div>
+
 
 <hr class="invisible">
 
 <div class="botpanel bgcolor-ink color-white">
 <div class="container">
-<div class="col-lg-6 social twitter">
-<h2>Twitter</h2>
-{% twitter_feed %}
-</div>
-<div class="col-lg-6 social blog">
-<h2>Blog <small class="">musings from around the web</small></h2>
-{% placeholder "IndexBlog" %}
-</div>
+
+
 </div>
 </div>
 {% endblock %}

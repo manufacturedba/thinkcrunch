@@ -9,8 +9,7 @@
 
 # Local
 .env
-.sass-cache
-.sass-cache/
+thinkcrunch/assets/.sass-cache
 static/
 
 # Recommended

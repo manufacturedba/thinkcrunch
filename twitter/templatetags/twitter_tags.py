@@ -25,7 +25,7 @@ def twitter_feed(template='tags/twitter/feed.html'):
     Template tag returns a dictionary of twitter objects
     that has had the text parsed and formatted.
     """
-    user = "thinkcrunch"
+    user = "manufacturedba"
     try:
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
         auth.set_access_token(access_token, access_token_secret)

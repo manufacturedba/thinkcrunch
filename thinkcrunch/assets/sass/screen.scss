@@ -120,24 +120,23 @@ h1, h2, h3, h4 {
              margin-top:5px;
             }
        }
-    
+    .navbar-brand-text {
+        font-size:35px;
+    }
    } // End .base
      
 .index { // Begin .index
     
     .toppanel {
         .gigantetron {
-            $size: 500px;
+            $size: 200px;
+            margin: 0 0 10px 0;
             height: $size;
-            background-image: url('../img/robertorodriguez.jpg');
+            background-image: url('../img/robertorodriguezcropped.jpg');
             background-repeat: no-repeat;
-            background-position: 50% 50%;
             background-attachment: scroll;
             @include background-size(auto 100%);
             line-height: $size;
-            transition: border-radius 4000ms ease;
-/*           &:hover { border-radius: 100%; transition: border-radius 2000ms ease } */
-            @include single-box-shadow($inset: true, $hoff: 2px, $voff: 2px, $blur: 10px);
            }
        }
        
@@ -145,30 +144,33 @@ h1, h2, h3, h4 {
         h1 {
             font-size: 2.5em;
             }
-    
+        .blog {
+            text-align: justify;
+            @include fancy-type;
+            font-size: 0.7em;
+            .entry-body { 
+                p {
+                    &:first-child { font-size: 1.1em; }
+                   }
+               }
+            .entry-info { font-size: 0.5em; }
+            .entry-last-update, .entry-footer { display: none; }
+           }
     }
     
-    .botpanel {
+    .toppanel {
         font-size: 0.8em;
         .twitter {
+            .tweets {
+                margin:0;
+                padding:0;
+            }
             .tweet {
-                font-size: 0.9em;
+                font-size: 0.8em;
                 line-height: 1.4em;  
                 margin: 0px 0px 10px 0px;
                
                }
-           }
-        .blog {
-            text-align: justify;
-            @include fancy-type;
-            font-size: 0.9em;
-            .entry-body { 
-                p {
-                    &:first-child { font-size: 1.2em; }
-                   }
-               }
-            .entry-info { font-size: 0.9em; }
-            .entry-last-update, .entry-footer { display: none; }
            }
        }
 

@@ -64,14 +64,15 @@ color: $time;
 .base {
     header {
         .selected {
-            a { color: $sky; }
+/*            a { color: $sky; }*/
+            a { color: white; }
            }
         .navbar {
-            background: white;
+            background: #02535e;
             .navbar-header {
                 .navbar-brand {
                     .logo {
-                        color: $dream;
+                        color: $sky;
                        }
                    }
                 .navbar-toggle {
@@ -95,8 +96,7 @@ color: $time;
             }
        }
     .toppanel {
-        background: transparentize($time, 0.9);
-        border: 1px dashed $ink;
+        margin:50px 0 0 0;
         }   
     .botpanel {
         .twitter {
@@ -105,13 +105,29 @@ color: $time;
                 a { color: $twitter-primary; }   
                }
            }
+       }
+    .midpanel {
         .blog {
             a {
                 color: $gold;
-                }
             }
-            
-       }
+            .hentry {
+                border-bottom: 1px solid $sky;
+            }
+        }
+    }
+    .footer {
+        background:#02535e;
+        .navbar {
+            background:#02535e;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            color: $sky;
+            a {
+                color:$sky;
+            }
+        }
+    }
 }
 
 #thecity {
