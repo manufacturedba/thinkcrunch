@@ -43,18 +43,19 @@ COMPRESS_STORAGE = DEFAULT_FILE_STORAGE
 COMPRESS_OFFLINE = False
 COMPRESS_ENABLED = False
 
+# S3 SETTINGS
 AWS_ACCESS_KEY_ID = 'AKIAJ7WR3NUFVC6R2AXQ'
-
 AWS_SECRET_ACCESS_KEY = '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'
-
 AWS_STORAGE_BUCKET_NAME = 'static.thinkcrunch.com'
-
+import boto.s3.connection
+AWS_S3_CALLING_FORMAT = boto.s3.connection.VHostCallingFormat()
 AWS_HEADERS = {
 		'x-amz-acl': 'public-read',
 		'Cache-Control': 'no-cache, max-age=%d' % max_age,
 		}
 		
 AWS_S3_SECURE_URLS = False
+# END S3
 
 def get_cache():
 	import os

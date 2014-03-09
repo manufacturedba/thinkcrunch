@@ -3,7 +3,7 @@
 from thinkcrunch.settings.base import *
 
 DEBUG = True
-STATIC_DEBUG = False
+STATIC_DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
 
@@ -24,6 +24,7 @@ DATABASES = {
     }
 }
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 TIME_ZONE = 'US/Eastern'
 
@@ -80,7 +81,7 @@ if not STATIC_DEBUG:
 
     AWS_STORAGE_BUCKET_NAME = 'static.thinkcrunch.com'
     import boto.s3.connection
-#    AWS_S3_CALLING_FORMAT = boto.s3.connection.VHostCallingFormat()
+    AWS_S3_CALLING_FORMAT = boto.s3.connection.VHostCallingFormat()
 
 #    AWS_QUERYSTRING_AUTH = False
     AWS_HEADERS = {
