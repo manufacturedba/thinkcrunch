@@ -23,6 +23,7 @@ http://www.colourlovers.com/palette/1411463/Developers_Dream
 */
 
 body {
+background: #FFFFFF;
 color: $ink;
 }
 
@@ -114,10 +115,13 @@ color: $time;
             .hentry {
                 border-bottom: 1px solid $sky;
             }
+            .hentry:last-child {
+                border-bottom: none;
+            }
         }
     }
     .footer {
-        background:#02535e;
+        border-top: 1px solid $ink;
         .navbar {
             background:#02535e;
             -webkit-box-shadow: none;

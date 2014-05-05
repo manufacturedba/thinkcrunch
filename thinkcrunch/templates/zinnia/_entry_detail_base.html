@@ -27,7 +27,7 @@
       {% endwith %}
       {% endblock entry-authors %}
       {% block entry-published %}
-      <abbr class="published" title="{{ object.creation_date|date:"c" }}">{{ object.creation_date|date:"DATE_FORMAT" }}</abbr>
+      <abbr class="published" title="{{ object.creation_date|date:"c" }}"><strong>{{ object.creation_date|date:"DATE_FORMAT" }}</strong></abbr>
       {% endblock entry-published %}
       {% block entry-categories %}
       {% with categories=object.categories.all %}
