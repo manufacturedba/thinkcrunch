@@ -1,7 +1,0 @@
-<div class="spacerpanel" id="thecity">
-    <div class="jumbotron">
-        <div class="container">
-        {% placeholder "TheCity" %}
-        </div>
-    </div>
-</div>

@@ -4,22 +4,23 @@
 {% block body_class %}{{ block.super }} index{% endblock %}
 
 {% block content %}
-<div class="toppanel hidden-xs col-lg-2">
-        <div class="gigantetron" id="">
-            {% placeholder "Gigantetron" or %}{% endplaceholder %}
-        </div>
-        <div class="social twitter">
-            {% twitter_feed %}
-        </div>
-</div>
-<div class="midpanel col-lg-10">
-    <div class="col-lg-12 center-block">{% placeholder "midpanel-12" or %}<!-- Empty mate -->{% endplaceholder %}</div>
-    <div class="col-lg-6">{% placeholder "midpanel-6-1" or %}<!-- Empty mate -->{% endplaceholder %}</div>
-    <div class="col-lg-6">{% placeholder "midpanel-6-2" or %}<!-- Empty mate -->{% endplaceholder %}</div>
-    <div class="col-lg-10 social blog container">
+<div class="midpanel col-md-8">
+    <div class="col-md-6">{% placeholder "midpanel-6-1" or %}<!-- Empty mate -->{% endplaceholder %}</div>
+    <div class="col-md-6">{% placeholder "midpanel-6-2" or %}<!-- Empty mate -->{% endplaceholder %}</div>
+    <div class="col-md-10 social blog container">
         {% placeholder "IndexBlog" %}
     </div>
 </div>
-
+<div class="toppanel hidden-xs col-md-4">
+    <div class="col-lg-12">
+        {% placeholder "toppanel-2" or %}{% endplaceholder %}
+    </div>
+    <div class="col-md-12">
+        <img id="profilePicture" src="{{ STATIC_URL }}/img/robertorodriguezcropped.jpg" />
+    </div>
+    <div class="col-md-12 social twitter">
+        {% twitter_feed %}
+    </div>
+</div>
 <hr class="invisible">
 {% endblock %}

@@ -15,7 +15,7 @@
         <link rel="author" href="https://plus.google.com/101735119998582030204/" />
         <meta name="Author" content="Roberto Rodriguez">
         <meta name="copyright" content="This content is copyright of thinkCrunch">
-        
+
         <! -- Twitter -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@thinkcrunch">
@@ -24,7 +24,7 @@
         <meta name="twitter:description" content="Development without limitations">
         <meta name="twitter:image" content="http://static.thinkcrunch.com/img/newgear.png">
         <!-- end Twitter -->
-        
+
         <!-- Open Graph -->
         <meta property="og:title" content="thinkCrunch Web Development">
         <meta property="og:description" content="Development without limitations">
@@ -32,7 +32,7 @@
         <meta property="og:image" content="http://static.thinkcrunch.com/img/newgear.png">
         <meta property="og:type" content="website">
         <!-- end Open Graph -->
-        
+
         <meta name="description" content="{% page_attribute 'meta_description' %}" />
         <meta name="author" content="{% block meta_author %}{% endblock %}" />
         <meta name="viewport" content="width=device-width" />
@@ -58,73 +58,53 @@
         <![endif]-->
         {% block header %}
         <header>
-        <nav class="navbar navbar-static-top" role="navigation">
-        <div class="navbar-header">
-        <a href="/" class="navbar-brand"><span class="navbar-brand-text logo header-font">thinkCrunch</span></a>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        </div>
-        
-        <div class="collapse navbar-collapse" id="header-navigation">
-        <ul class="nav navbar-nav">
-        {% show_menu 0 100 100 100 %}
-        </ul>
-        {% if user.is_authenticated %}
-            <p class="navbar-text navbar-right">Signed in as {{ user.username }}</p>
-        {% else %}
-            {% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
+            <hr id="topBar">
+            <nav class="navbar navbar-static-top" role="navigation">
+            <div class="col-md-12 center-block color-silent">
+                {% placeholder "midpanel-12" or %}<!-- Empty mate -->{% endplaceholder %}
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header-navigation">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+            </div>
 
-<form class="navbar-form navbar-right" role="login" method="post" action="/admin/">
-{% csrf_token %}
-<div class="form-group">
-<input type="text" class="form-control" name="username" />
-</div>
-<div class="form-group">
-<input type="password" class="form-control" name="password" />
-</div>
-<input type="submit" class="btn navbar-btn" value="login" />
-<input type="hidden" name="this_is_the_login_form" value="1">
-<input type="hidden" name="next" value="{{ request.get_full_path }}" />
-</div>
-</form>
-        {% endif %}
-        </div>
+            <div class="collapse navbar-collapse" id="header-navigation">
+                <ul class="nav navbar-nav">
+                {% show_menu 0 100 100 100 %}
+                </ul>
+            </div>
         </nav>
         </header>
         {% endblock %}
-        
-        <div class="container-fluid">
+
+        <div class="container">
         {% block content %}
         Something should go here
         {% endblock content %}
         </div>
-        
+
         {% block footer %}
-        <footer class="footer">
-            <nav class="" role="navigation">
-                    <div class="nav navbar-nav container">
-                        <div class="text-center center-block">
-                        <a href="/" class="btn navbar-btn color-ink"><span class="navbar-brand-text logo header-font">thinkCrunch</span></a>
-                        <a class="btn navbar-btn color-ink" href="https://github.com/manufacturedba">
-                            <i class="fa fa-lg fa-github"></i>
-                        </a>
-                        <a class="btn navbar-btn color-ink" href="https://twitter.com/manufacturedba">
-                            <i class="fa fa-lg fa-twitter"></i>
-                        </a>
-                        </div>
-                    </div>
-            </nav>
+        <footer class="footer bgcolor-alt">
+            <div class="nav navbar container">
+                <div class="text-center center-block">
+                <a href="/" class="btn navbar-btn color-ink"><span class="navbar-brand-text logo header-font">thinkCrunch</span></a>
+                <a class="btn navbar-btn color-ink" href="https://github.com/manufacturedba">
+                    <i class="fa fa-lg fa-github"></i>
+                </a>
+                <a class="btn navbar-btn color-ink" href="https://twitter.com/manufacturedba">
+                    <i class="fa fa-lg fa-twitter"></i>
+                </a>
+                </div>
+            </div>
         </footer>
         {% endblock %}
-        
+
         {% block javascript_library %}
-        
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         {% compress js %}
@@ -132,7 +112,7 @@
         <script src="{{ STATIC_URL }}js/plugins.js"></script>
         <script src="{{ STATIC_URL }}js/main.js"></script>
         {% endcompress %}
-        
+
         {% endblock javascript_library %}
         {% block javascript %}
         {% endblock javascript %}

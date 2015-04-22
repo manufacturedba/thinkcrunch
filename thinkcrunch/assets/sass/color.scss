@@ -6,18 +6,19 @@ $dedede: #DEDEDE; // Pukey. Use sparingly.
 $ink: #333; // Used for all regular text
 $twitter-primary: #55ACEE; // Twitter link color
 
-$colors: 
+$colors:
     time #48555E,
     gold #C6B712,
-    dream #1577B7, 
+    dream #1577B7,
     sky #10B1E2,
-    dedede #DEDEDE, 
+    dedede #DEDEDE,
     ink #333,
     twitter-primary #55ACEE,
-    white #FFFFFF
+    silent #FFFFFF,
+    alt #02535e
 ;
 
-/* 
+/*
 Color template by Jdsfighter
 http://www.colourlovers.com/palette/1411463/Developers_Dream
 */
@@ -44,7 +45,7 @@ color: $ink;
         .#{$class}-#{nth($color, 1)} {
             #{$target}: nth($color, 2);
         }
-    } 
+    }
 }
 
 @include class-colors(bgcolor, $colors, background);
@@ -53,7 +54,7 @@ color: $ink;
 .full-height {
     height: 100%;
     }
-   
+
 a {
 // Reset all links
 color: $time;
@@ -89,7 +90,7 @@ color: $time;
            }
         .nav {
              li {
-                a:hover { 
+                a:hover {
                     border-bottom-color: $gold;
                     background-color: inherit;
                    }
@@ -98,12 +99,12 @@ color: $time;
        }
     .toppanel {
         margin:50px 0 0 0;
-        }   
+        }
     .botpanel {
         .twitter {
             .tweets { padding: 0; }
             .tweet {
-                a { color: $twitter-primary; }   
+                a { color: $twitter-primary; }
                }
            }
        }
@@ -123,8 +124,6 @@ color: $time;
     .footer {
         border-top: 1px solid $ink;
         .navbar {
-            background:#02535e;
-            -webkit-box-shadow: none;
             box-shadow: none;
             color: $sky;
             a {
@@ -140,6 +139,6 @@ color: $time;
         .container {
             border-radius: 10px;
             background: transparentize($dream, 0.4);
-           } 
+           }
        }
    }
