@@ -147,7 +147,7 @@ h1, h2, h3, h4, .header-font {
         .blog {
             text-align: left;
             @include fancy-type;
-            font-size: 1.5em;
+            font-size: 2em;
             .entry-body {
                 p {
                     &:first-child { font-size: 1.2em; }
