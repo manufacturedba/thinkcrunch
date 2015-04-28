@@ -5,7 +5,7 @@
     {% block entry-title %}
     <div class="entry-title">
       <h2 title="{{ object.title }}" rel="bookmark">
-        {{ object.title|widont }}
+        <a href="{{ object.get_absolute_url }}">{{ object.title|widont }}</a>
       </h2>
     </div>
     {% endblock entry-title %}

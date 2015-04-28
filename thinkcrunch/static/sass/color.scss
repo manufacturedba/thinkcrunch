@@ -5,6 +5,7 @@ $sky: #10B1E2;  // Muted text
 $dedede: #DEDEDE; // Pukey. Use sparingly.
 $ink: #333; // Used for all regular text
 $twitter-primary: #55ACEE; // Twitter link color
+$alt: #02535e;
 
 $colors:
     time #48555E,
@@ -65,12 +66,14 @@ color: $time;
 
 .base {
     header {
-        .selected {
-/*            a { color: $sky; }*/
-            a { color: white; }
-           }
+        a {
+            color: #FFF;
+            &:hover {
+                color: #EEE;
+            }
+        }
         .navbar {
-            background: #02535e;
+            background: $alt;
             .navbar-header {
                 .navbar-brand {
                     .logo {
@@ -91,7 +94,6 @@ color: $time;
         .nav {
              li {
                 a:hover {
-                    border-bottom-color: $gold;
                     background-color: inherit;
                    }
                }

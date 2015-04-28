@@ -53,10 +53,6 @@ h1, h2, h3, h4, .header-font {
            }
         .nav {
              li {
-                a:hover {
-                    border-bottom-width: 2px;
-                    border-bottom-style: solid;
-                   }
                }
              .selected {
                 a:hover {
@@ -65,12 +61,7 @@ h1, h2, h3, h4, .header-font {
                    }
                }
        }
-        .navbar-collapse {
 
-            .navbar-btn {
-
-               }
-           }
         .navbar-nav {
             text-transform: uppercase;
             > li {
@@ -144,18 +135,6 @@ h1, h2, h3, h4, .header-font {
         h1 {
             font-size: 6em;
             }
-        .blog {
-            text-align: left;
-            @include fancy-type;
-            font-size: 2em;
-            .entry-body {
-                p {
-                    &:first-child { font-size: 1.2em; }
-                   }
-               }
-            .entry-info { font-size: 1em; }
-            .entry-last-update, .entry-footer { display: none; }
-           }
     }
 
     .toppanel {
@@ -194,4 +173,25 @@ h1, h2, h3, h4, .header-font {
     background: #333;
     height: 20px;
     margin: 0px;
+}
+
+.blog {
+    text-align: left;
+    @include fancy-type;
+    font-size: 2em;
+    .entry-body {
+        p {
+            &:first-child { font-size: 1.2em; }
+        }
+    }
+    .entry-info { font-size: 1em; }
+    .entry-last-update, .entry-footer { display: none; }
+}
+
+.sidebar {
+    font-size: 1.5em;
+}
+
+.align-center {
+    text-align: center;
 }

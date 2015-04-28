@@ -70,7 +70,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'sekizai.context_processors.sekizai',
     'thinkcrunch.context_processors.site',
 )
-    
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.gzip.GZipMiddleware',
@@ -171,7 +171,7 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
-        'verbose': { 
+        'verbose': {
             'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
             },
         'simple': {
@@ -201,7 +201,7 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True,
             },
-            
+
         'django.request': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
@@ -215,7 +215,7 @@ CACHE_MIDDLEWARE_SECONDS = max_age
 COMPRESS_PARSER = 'compressor.parser.BeautifulSoupParser'
 COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'
 COMPRESS_ENABLED = True
-	
+
 """COMPRESS_OFFLINE_CONTEXT = {
     'path_to_files': '/static/js/',
 }"""
@@ -226,6 +226,9 @@ BITLY_API_KEY = 'R_8beee1fcfd128afe431e54decfd54c19'
 #ZINNIA_ENTRY_BASE_MODEL = 'cmsplugin_zinnia.placeholder.EntryPlaceholder'
 ZINNIA_URL_SHORTENER_BACKEND = 'zinnia.url_shortener.backends.bitly'
 ZINNIA_SPAM_CHECKER_BACKENDS = ('zinnia.spam_checker.backends.long_enough',)
+CMSPLUGIN_ZINNIA_TEMPLATES = [
+  ('zinnia/_short_entry_detail.html', 'Short entry template'),
+]
 
 TWITTER_CONSUMER_KEY = 'XRj1NIWc3YwTIHtbVou0zw'
 TWITTER_CONSUMER_SECRET = 'NoSx73DCKx7xgqbHABGTFqTrdXRpnlAHjFygvQb3s'
